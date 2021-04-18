@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0%;
 }
 .imgStyle {
     height: 60px;
@@ -10,4 +11,10 @@ html, body {
 .footerImg {
     height: 20px;
     width: 22px;
+}
+header, footer {
+    background-color: rosybrown;
+}
+body {
+    background-color: #e0e0e0;
 } 
