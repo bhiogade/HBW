@@ -2,9 +2,16 @@
     height: 150px;
     width: 150px;
     padding: 4%;
-    border-radius: 25%;
-    
-    
+    border-radius: 25%;   
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 850px ;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    background-color: #e0e0e0;
 }
 
 .img-background {
@@ -15,6 +22,24 @@
     background-size: cover;
 }
 
+#searchBar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding : 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    text-align: start
+}
+
+.view-class {
+    text-align: center;
+    text-decoration: none;
+}
 #list-view {
     scroll-behavior: smooth;
 }
@@ -32,3 +57,12 @@
     margin-left: 15%;
     margin-right: 15%;
 } 
+
+.loginStyle{
+    right: 0%;
+    margin-top: 20px;
+    margin-right: 1%;
+    text-decoration: none;
+    position: absolute;
+    color: black;
+  } 

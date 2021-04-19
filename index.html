@@ -4,36 +4,45 @@
     <title>Index</title>
     <link href="styles/common.css" rel="stylesheet"/>
     <link href="styles/index.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- <div>Header Div</div>-->
     <header>
         <img class="imgStyle" alt="logo" src="assests/images/logo.png">
-        <a href="login.html" target="_self">Login</a>
+        <a href="login.html" target="_self" class="loginStyle">Login</a>
     </header>
     
     <content>
     
         <!-- <div>Content Div</div> -->
-        <div class="img-background"><input type=text placeholder="City"></div>
+            <div class="body">
+                <div class="img-background">
+                    <input id="searchBar" type=text name="city" placeholder="city">
+                </div>
         <div class="city-cards"> 
-        <a href="list.html"><img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"></a>
-        <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg">
-        <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg">
-        <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"> 
+        <a href="list.html">
+            <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"></a>
+            <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg">
+            <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg">
+            <img class="imgPlace" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg">
         </div>
+
         <br/>
-        <a href="index.html">View more  >></a>
+
+        <div class="view-class"><a href="index.html">View more >></a></div> 
+        <br/>
+    </div>
     </content>
     <!--<div>Footer Div</div>-->
     <footer>
-        <div><a href="contact.html" target="_self">Contact Us</a></div>
-        <div>
+        <div><a href="contact.html" target="_self" id="contactStyle">Contact Us</a></div>
+        <div id="iconStyle">
             <a href="https://www.facebook.com/" target="_blank"><img class="footerImg" src="assests/images/facebook.png"></a>
             <a href="https://www.instagram.com/" target="_blank"><img class="footerImg" src="assests/images/instagram.png"></a>
             <a href="https://www.twitter.com/" target="_blank"><img class="footerImg" src="assests/images/twitter.png"></a>
         </div>
-        <div>&#169; 2020 ROOM SEARCH PVT LTD</div>
+        <div id="copyrightStyle">&#169; 2020 ROOM SEARCH PVT LTD</div>
     </footer>
 </body>
 
