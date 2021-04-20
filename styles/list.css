@@ -25,6 +25,10 @@
     margin-right: 4%;
 } 
 
+.hotel-list-view:hover {
+    background-color: rosybrown;
+}
+
 .viewSty{
     font-weight: bold;
     text-decoration: none; 
@@ -39,7 +43,8 @@
 }
 
 #map-view {
-    display: none;
+    display: flex;
+     flex-direction: column;
 }
 
 #list{
