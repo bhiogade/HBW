@@ -4,12 +4,14 @@ html, body {
     margin: 0%;
     background-color: #e0e0e0;
     font-family: 'Ubuntu',sans-serif;
+    position: relative;
 }
 .imgStyle {
     height: 60px;
     width: 60px;
     margin: auto;
     margin-left: 2%;
+    position: relative;
 }
 
 .loginStyle{
