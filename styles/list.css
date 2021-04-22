@@ -51,3 +51,6 @@
     scroll-behavior: smooth;
 }
 
+.checked {
+    color: orange;
+}

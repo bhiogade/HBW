@@ -1,15 +1,16 @@
-
-
 .body {
     display: flex;
     flex-direction: column;
     height: 850px ;
+    width: auto;
+    position: relative;
     justify-content: space-evenly;
     overflow-y: scroll;
     background-color: #e0e0e0;
 }
 
 .img-background {
+    position: relative;
     height: 380px;
     background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
     background-position: center;
@@ -35,7 +36,7 @@
 .city-cards {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     /*margin-left: 15%;
@@ -108,14 +109,41 @@
 .view-class {
     text-align: center;
     text-decoration: none;
+} 
+
+@media only screen and (max-width:500px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    #searchBar {
+        width: 60%;
+    }
+    .city-cards {
+        flex-direction: column;
+        margin: auto;
+    }
+    .imgPlace {
+        height: 200px;
+        width: 200px;
+        padding: 4% 0%;
+    }
 }
-/* 
-.loginStyle{
-    right: 0%;
-    margin-top: 20px;
-    margin-right: 1%;
-    text-decoration: none;
-    position: absolute;
-    color: black;
-  }
-*/ 
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    #search-bar {
+        width: 60%;
+    }
+    .city-cards {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .imgPlace {
+        height: 250px;
+        width: 250px;
+        padding: 4% 0%;
+    }
+}
