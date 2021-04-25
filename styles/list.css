@@ -1,56 +1,95 @@
-#container{
-    display: grid;
-}
-
-#list-view {
-    scroll-behavior: smooth;
-}
-
-#map-view {
-    scroll-behavior: smooth;
-}
-
-.list-img {
+.hotel-image-small {
     height: 200px;
     width: 250px;
 }
-
-.hotel-list-view {
+.hotel{
+    margin: 4% 5% 0% 5%; 
+    background-color: lightgrey;
     width: 40%;
-    margin: 4%;
-    background-color: rgb(132, 136, 139);
     float: left;
     display: flex;
-    margin-left: 5%;
-    margin-right: 4%;
-} 
-
-.hotel-list-view:hover {
+    justify-content: start;
+    align-content: center;
+}
+.hotel:hover {
     background-color: rosybrown;
 }
-
-.viewSty{
+#list-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+}
+#list-map {
+    position: relative;
+    top: 0%;
+}
+#select-list {
+    position: absolute;
+    left: 42%;
     font-weight: bold;
-    text-decoration: none; 
-    color:black
 }
-
-.imagesView{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+#select-map {
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+}
+#pills-tab {
     justify-content: center;
+    margin-top: 10%;
 }
 
-#map-view {
-    display: flex;
-     flex-direction: column;
+
+
+@media only screen and (max-width: 768px){
+    img{
+        max-width: 100%;
+    }
+    .social-media-images{
+        margin-right: 12%;
+    }
+    #pills-tab {
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .hotel{
+        margin: 5% 5% 2.5% 5%; 
+        background-color: lightgrey;
+        width: 90%;
+        float: left;
+        display: flex;
+        justify-content: start;
+        align-content: center;
+    }
+
 }
 
-#list{
-    scroll-behavior: smooth;
-}
+@media only screen and (max-width:576px){
+    img{
+        max-width: 100%;
+    }
+    .social-media-images{
+        margin-right: 12%;
+    }
+    #pills-tab {
+        justify-content: center;
+        margin-top: 16%;
+    }
 
-.checked {
-    color: orange;
+    .hotel{
+        margin: 5% 5% 2.5% 5%; 
+        background-color: lightgrey;
+        width: 90%;
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: center;
+    }
+
+    .hotel-image-small {
+        height: auto;
+        width: 90%;
+    }
 }

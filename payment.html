@@ -1,143 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment</title>
-  <link href="styles/common.css" rel="stylesheet" />
-  <link href="styles/payment.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <!-- Import CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/payment.css">
 </head>
+
 <body>
-    <!-- <div>Header Div</div>-->
-    
+    <div class="main-container">
+        <!-- Added the header elements: Logo and Login Button -->
+        <header class="header-footer">
+            <a href="index.html" class="logo">
+                <img src="assests/images/logo.png" id="logo-image" alt="logo" />
+            </a>
+            <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal" data-backdrop="false"
+                data-target="#login-modal">LOGIN</button>
 
-      <header>
-          <a href="index.html"><img class="imgStyle" alt="logo" src="assests/images/logo.png"></a>
-        <span class="loginStyle">
-          <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#login" id="login-button"
-          style="padding: -0.625rem .75rem;">LOGIN</button>
-        </span><br/>
-      </header>
-
-      
-        <div class="mainDiv">
-
-          <div class="imgDiv" style="background-color: rgb(132,136,139); width: 50%; height: 20%; margin: 2% auto">
-
-            <img style="height: 270px; width: 300px;"
-              src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" />
-            <span style=" margin-left: 5%; display: flex; flex-direction: column; color: black;">
-              <h2 style="margin-top: 10%;">Radisson Blu Hotel</h2>
-              <p>#38 of 1,289 hotels in New Delhi</p>
-              <span>National Highway 8, New Delhi 110017 India</span>
-
-          </div>
-
-
-          <div class="descSty">
-            <p id="marginDesc">
-              <b>Name:</b> John Doe </br></br>
-              <b>Number of Adults:</b> 2 </br></br>
-              <b>Check-in Date:</b> 06/06/2020 </br></br>
-              <b>Check-out Date:</b> 08/06/2020
-            </p>
-
-            <p style=" padding: 1% 2%; margin: 2%;"></br>
-              <b>Tariff Breakdown:</b> Rs.1000 &#10799; 2 Adults &#10799; 5 Nights </br></br>
-              <b>Total Amount:</b> Rs.10000 </br> </br>
-            </p>
-
-            <a href="#" target="_self" style="text-decoration: none; color: black; margin: auto;"><button type="button"
-              class="btn btn-success" disabled>Pay Now</button></a>
-
-          </div>
-
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="login-modal-label">Please Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="login-form">
+                                <div class="login-field">
+                                    <label for="username">Username: </label>
+                                    <input type="text" id="username" name="username" placeholder="Enter Username"
+                                        required />
+                                </div>
+                                <div class="login-field">
+                                    <label for="password">Password: </label>
+                                    <input type="password" id="password" name="password" placeholder="Enter Password"
+                                        required />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="login-button" type="button" class="btn btn-primary"
+                                data-dismiss="modal">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Added the main body elements: Hotel Details(wih image of hotel), Customer Details and Payment Details -->
+        <div id="payment-container">
+            <div id="hotel-details">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+                    class="hotel-image">
+                <div class="hotel-name-rating">
+                    <h2>Radisson Blu Hotel</h2>
+                    <p>#38 of 1,289 hotels in New Delhi</p>
+                    <p>National Highway 8, New Delhi 110017 India</p>
+                </div>
+            </div>
+            <div id="customer-payment-details">
+                <div id="customer-details">
+                    <p><strong class="heading">Name:</strong>&nbsp;John Doe</p>
+                    <p><strong class="heading">Number of Adults:</strong>&nbsp;2</p>
+                    <p><strong class="heading">Check-in Date:</strong>&nbsp;04/06/2020</p>
+                    <p><strong class="heading">Check-out Date:</strong>&nbsp;06/06/2020</p>
+                </div>
+                <div id="payment-details">
+                    <p><strong class="heading">Tariff Breakdown:</strong>&nbsp;Rs.1000 x 2 Adults x 5 Nights</p>
+                    <p><strong class="heading">Total Amount:</strong>&nbsp;Rs.10000</p>
+                </div>
+                <div>
+                    <a href="#" id="pay-now">
+                        <button type="button" class="btn btn-success" disabled>Pay Now</button>
+                    </a>
+                </div>
+            </div>
         </div>
-      
+        <!-- Added the footer elements: Contact Us Button, Social Media Links -->
+        <footer class="header-footer">
+            <div id="contact">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false"
+                    data-target="#contact-modal">Contact Us</button>
 
-      <footer>
-          <div><span id="contactStyle"><button type="button" class="btn btn-info btn-sm" data-toggle="modal"
-                data-target="#example-modal-signup" id="sign-up-button">Contact Us</button>
-            </span></div>
-          <div id="iconStyle"><a href="https://www.facebook.com/" target="_blank"><img class="footerImg"
-                src="assests/images/facebook.png"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img class="footerImg"
-                src="assests/images/instagram.png"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img class="footerImg" src="assests/images/twitter.png"></a>
+                <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="contact-modal-label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="contact-modal-label">Get in touch</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <p>
+                                  Thank you for reaching out!!! <br>
+                                  Please enter you email and we will get back to you.
+                              </p>
+                              <label for="email">Email: </label>
+                              <input type="text" id="email" name="email" placeholder="Enter your email id"
+                                  required>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Sumbit</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div id="copyrightStyle">&#169; 2020 ROOM SEARCH PVT LTD</div>
+        </div>
+        <div id="copyright-text">
+          © 2020 ROOM SEARCH PVT. LTD.
+      </div>
+      <div id="social-media-images">
+          <a href="https://www.facebook.com" target="_blank">
+              <img src="assests/images/facebook.png" class="social-media-image">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+              <img src="assests/images/instagram.png" class="social-media-image">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+              <img src="assests/images/twitter.png" class="social-media-image">
+          </a>
+      </div>
       </footer>
-
-    <!--login-->
-    <div>
-    <div class="modal" tabindex="-1" role="dialog" id="login">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="modal-header">Please Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-
-              <div class="modal-body"
-                  style=" display: flex;flex-direction: column; margin-left: 7%;  margin-right: 7%;">
-                  <div style="display: flex; flex-direction: row;">
-                      <label style="margin-right: 25%;" for="name">Username:</label><br />
-                      <input type="text" id="name" placeholder="Enter Username" required />
-                  </div>
-                  <br/>
-                  <div style="display: flex; flex-direction: row;">
-                      <label style="margin-right: 25%;" for="example-input-password">Password:</label><br />
-                      <input type="password" id="example-input-password" placeholder="Enter Password" required
-                          autocomplete="off" />
-                  </div>
-    
-              </div>
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-sm"
-                    style="display: flex; margin: auto;">Login</button>
-  
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-      
-      <!--contact modal-->
-      <div class="modal" tabindex="-1" role="dialog" id="example-modal-signup">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-header">Get in touch</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <p>Thank you for reaching out!!!<br />
-                            Please enter you email and we will get back to you</p>
-                        <p style="display: flex; float: left;">
-                            <label for="email">Email:</label><br />
-                            <input type="email" id="email" placeholder="Enter your email id" required />
-                        </p>
-      
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-sm">Submit</button>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>  
+</div>
 </body>
-</html>
+</html> 
