@@ -18,8 +18,11 @@
 }
 #city-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 4% 0%;
+    width: 90%;
+    margin: 1% 5%;
 }
 .overlay {
     position: absolute;
