@@ -12,7 +12,6 @@
     border-style: solid;
     position: absolute;
 } 
-
 .loader{
     animation: spin 1s linear infinite;
 }

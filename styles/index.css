@@ -2,10 +2,7 @@
     height: 150px;
     width: 150px;
     border-radius: 25%;
-    box-shadow: 10px 10px 10px grey;
-
-
-    
+    box-shadow: 10px 10px 10px grey;  
 }
 #index-container {
     display: flex;
@@ -30,19 +27,18 @@
     width: 90%;
     margin: 1% 5%;
 }
-
 #city-cards2{
     display: none;
     grid-template-columns: auto auto auto auto;
     row-gap: 100px;
     justify-content:space-evenly;
     padding: 4% 0%;
+    width: 90%;
+    margin: 1% 5%;
 }
-
 #city-new{
     display: block;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -119,6 +115,7 @@
         padding: 4% 5%;
     }
 }
+
 @media only screen and (max-width:576px){
     img{
         max-width: 100%;
