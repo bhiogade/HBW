@@ -44,6 +44,11 @@ footer {
 }
 #login {
     margin-right: 2%;
+    display: flex;
+}
+#logout {
+    margin-right: 2%;
+    display: none;
 }
 #contact {
     margin-left: 2%;

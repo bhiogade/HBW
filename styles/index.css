@@ -3,6 +3,9 @@
     width: 150px;
     border-radius: 25%;
     box-shadow: 10px 10px 10px grey;
+
+
+    
 }
 #index-container {
     display: flex;
@@ -19,11 +22,27 @@
 #city-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 100px;
+    justify-content:space-evenly;
     padding: 4% 0%;
     width: 90%;
     margin: 1% 5%;
 }
+
+#city-cards2{
+    display: none;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 100px;
+    justify-content:space-evenly;
+    padding: 4% 0%;
+}
+
+#city-new{
+    display: block;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -68,16 +87,19 @@
     display: flex;
     justify-content: center;
 }
+#view-less {
+    margin-bottom: 7%;
+    display: none;
+    justify-content: center;
+}
 
 @media only screen and (max-width:768px){
     img{
         max-width: 100%;
     }
-
     #banner{
         margin-right: 0%;
     }
-
     #search-bar {
         position: absolute;
         top: 50%;
@@ -85,35 +107,25 @@
         right: 13%;
         bottom: 50%;
     }
-
-
-
     .city-image{
         height: 200px;
         width: 200px;
         border-radius: 25%;
         box-shadow: 10px 10px 10px grey;
-        margin: 6% 8%;
-
+        margin: 6% 8%;   
     }
-
     #city-cards {
        flex-wrap: wrap;
         padding: 4% 5%;
     }
-
 }
-
-
 @media only screen and (max-width:576px){
     img{
         max-width: 100%;
     }
-
     #banner{
         margin-right: 0%;
     }
-
     #search-bar {
         position: absolute;
         top: 50%;
@@ -121,21 +133,15 @@
         right: 28%;
         bottom: 50%;
     }
-
-
-
     .city-image{
         height: 270px;
         width: 270px;
         border-radius: 25%;
         box-shadow: 10px 10px 10px grey;
-        margin: 6% auto;
-
+        margin: 6% auto;    
     }
-
     #city-cards {
        flex-wrap: wrap;
         padding: 4% 5%;
     }
-    
 }
