@@ -1,8 +1,14 @@
 let headerTemplate = `<header class="header-footer">
-<img src="assests/images/logo.png" class="logo" id="logo-image" alt="logo" />
+
+<a href="index.html" class="logo">
+    <img src="assests/images/logo.png" id="logo-image" alt="logo"/>
+</a>
+
 <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal" data-backdrop="false"
     data-target="#login-modal">LOGIN</button>
+
 <button type="button" id="logout" onclick = "logout()" class="btn btn-light btn-sm" data-toggle="modal" data-backdrop="false">LOGOUT</button>
+
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -69,6 +75,7 @@ function logout(){
 
     // To disable pay now button in payment.html page
         document.getElementById("pay-now").disabled = true;
+        window.location.reload();
 }
 
 

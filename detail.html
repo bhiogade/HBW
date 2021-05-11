@@ -11,28 +11,34 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/detail.css">     
+        <link rel="stylesheet" href="styles/detail.css">
     </head>
+
+
     <body>
         <div class="main-container">
-            <!-- Added the header elements: Logo and Login Button -->
-            
+    
             <div id="headers"></div>
-
-            <!-- Content Div -->
+    
             <div id="detail-container">
                 <div id="slideshow-booking">
                     <div id="slideshow-container">
                         <div id="carousel-controls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="slider-image" class="d-block w-100" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="First slide">
+                                    <img class="slider-image" class="d-block w-100"
+                                        src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+                                        alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="slider-image" class="d-block w-100" src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg" alt="Second slide">
+                                    <img class="slider-image" class="d-block w-100"
+                                        src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg"
+                                        alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="slider-image" class="d-block w-100" src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg" alt="Third slide">
+                                    <img class="slider-image" class="d-block w-100"
+                                        src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg"
+                                        alt="Third slide">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carousel-controls" role="button" data-slide="prev">
@@ -45,35 +51,43 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Added the Booking Form with all the relevant fields required -->
                     <div id="booking-form">
                         <form action="payment.html" method="get" autocomplete="off">
                             <div class="outer">
                                 <label for="adult">Adults:</label>
-                                <input class="inner" type="number" name="adult" id="adult" value="1" min="1" oninput="calculatePrice()" required/>
+                                <input class="inner" type="number" name="adult" id="adult" value="1" min="1"
+                                    oninput="calculatePrice()" required />
                             </div>
+
                             <div class="outer">
                                 <label for="name">Name:</label>
-                                <input class="inner" type="text" name="name" id="name" required/>
+                                <input class="inner" type="text" name="name" id="name" required />
                             </div>
+
                             <div class="outer">
                                 <label for="fromDate">From Date:</label>
-                                <input class="inner" type="date" name="fromDate" id="fromDate" required/>
+                                <input class="inner" type="date" name="fromDate" id="fromDate" required />
                             </div>
+
                             <div class="outer">
                                 <label for="toDate">To Date:</label>
-                                <input class="inner" type="date" name="toDate" id="toDate" onchange="calculatePrice()" required/>
+                                <input class="inner" type="date" name="toDate" id="toDate" onchange="calculatePrice()"
+                                    required />
                             </div>
+
                             <div class="outer">
                                 <label for="price">Total:</label>
-                                <input class="inner" type="text" name="price" id="price" readonly/>
+                                <input class="inner" type="text" name="price" id="price" readonly />
                             </div>
+
                             <div>
-                                <input type="submit" class="btn btn-outline-success" value="Book Now" id="book-now"/>
+                                <input type="submit" onclick="displayToPaymentPage()" class="btn btn-outline-success"
+                                    value="Book Now" id="book-now" />
                             </div>
                         </form>
                     </div>
                 </div>
+
                 <div id="hotel-description">
                     <h2>Radisson Blu Hotel</h2>
                     <h5 class="heading">RATING</h5>
@@ -92,18 +106,30 @@
                         <li>Fitness center</li>
                         <li>Pool</li>
                     </ul>
+    
                     <h5 class="heading">DESCRIPTION</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, illum totam magni voluptatibus libero delectus nesciunt hic vel! Aperiam esse asperiores culpa, natus quam quis eum ex doloremque doloribus architecto!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet possimus atque illum corrupti
+                        voluptatum blanditiis, omnis repellendus aspernatur rem, sunt incidunt. Nobis omnis voluptatum sequi
+                        cumque cum nulla ipsum quam sapiente corrupti error, perspiciatis quasi saepe fugit necessitatibus
+                        officia itaque, quisquam aut totam odit repudiandae placeat repellat veniam eveniet. A dolor
+                        voluptatum laudantium. Repellat ex, quas omnis nemo harum soluta sequi sit tempora consequuntur
+                        beatae adipisci nam minima, minus cupiditate nihil? Voluptas placeat ratione architecto molestias
+                        expedita ipsa exercitationem, dignissimos quasi voluptate minus id ex repellendus tempore
+                        reprehenderit, quod maxime facere temporibus hic, repellat pariatur. Beatae quaerat fuga qui ut
+                        impedit omnis velit, recusandae odit ad alias iste vero perferendis facilis, esse nesciunt aliquid
+                        et eos mollitia ex sed! Alias velit quidem nostrum, doloremque ad dolorem natus esse, ratione fuga
+                        voluptatibus sed rerum! A, accusamus animi! Fugit, atque ea, mollitia ducimus, sed sint maiores
+                        corporis ad minima in porro culpa!
                     </p>
                 </div>
             </div>
-            <!-- Added the footer elements: Contact Us Button, Social Media Links -->
-
+        
             <div id="footers"></div>
-                <script src="scripts/common.js"> </script>
-                <script src="scripts/detail.js"> </script>
 
+            <script src="scripts/common.js"> </script>
+            <script src="scripts/detail.js"> </script>
+            <script src="scripts/payment.js"> </script>
         </div>
     </body>
 </html>
