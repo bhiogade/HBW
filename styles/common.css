@@ -1,11 +1,12 @@
 * {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: #e0e0e0;  
+    background-color: #e0e0e0;
 }
 a {
     text-decoration: none !important;
@@ -27,7 +28,7 @@ a {
     width: 22px;
 }
 .header-footer {
-    background-color:rosybrown;
+    background-color: rosybrown;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -36,10 +37,10 @@ a {
     align-items: center;
 }
 header {
-    top: 0;  
+    top: 0;
 }
 footer {
-    padding:0.7%;
+    padding: 0.7%;
     bottom: 0;
 }
 #login {
@@ -82,21 +83,29 @@ footer {
     color: orange;
 }
 
-@media only screen and (max-width: 768px){
-    img{
+@media only screen and (max-width: 768px) {
+    img {
         max-width: 100%;
     }
-    .social-media-images{
+    .social-media-images {
         margin-right: 12%;
     }
-
 }
 
-@media only screen and (max-width:576px){
-    img{
+@media only screen and (max-width: 576px) {
+    img {
         max-width: 100%;
     }
-    .social-media-images{
+    .social-media-images {
         margin-right: 12%;
     }
-} 
+}
+
+#booksearch {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+}
